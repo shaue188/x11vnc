@@ -718,7 +718,9 @@ static char *colon_str(char *line) {
 		*p = '\0';
 	}
 	t = strdup(q);
-	*p = '\n';
+	if (p) {
+		*p = '\n';
+	}
 	return t;
 }
 
